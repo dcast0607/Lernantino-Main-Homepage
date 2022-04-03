@@ -1,0 +1,211 @@
+/* Main Variables */
+
+:root {
+/*Page Wide Variables*/
+--mainFont: 'Times New Roman', Times, serif; 
+
+/*Header Variables*/
+--underlineColorHeader: rgb(1, 106, 106);
+--headerBackgroundColor: rgb(45, 45, 45); 
+--headerTextColor: rgb(1, 106, 106);
+--titleTextColor: black;
+--titleBackgroundColor: rgb(1, 106, 106);
+
+/*Body Variables*/
+--bodyBackgroundColor: white; 
+
+/*Main Content Variables*/
+--generalTextColor: rgb(2, 38, 77); 
+--appTitleTextColor: black; 
+--contactMeTextColor: black;
+--workSectionBorderColor: rgb(132, 187, 187);
+--generalFontSize: 12px;
+}
+
+* {
+    font-family: var(--mainFont); 
+    font-size: var(--generalFontSize);
+    padding: 0px; 
+    margin: 0px;
+}
+
+/*Home Page Header Styling*/
+
+#headerBanner {
+    display: block;
+    background-color: var(--headerBackgroundColor);
+    height: 50px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.homepageHeaderTitle {
+    display: block;
+    font-size: 24px;
+    background-color: var(--titleBackgroundColor);
+    width: 20%;
+    text-align: right;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.homepageHeaderOptionsBox {
+    padding-right: 35px;
+}
+
+.homepageHeaderButton {
+    display: inline;
+    color: var(--headerTextColor);
+    font-size: 18px;
+    font-style: bold;
+    width: 20%;
+    padding: 5px;
+    text-underline-offset: 3px;
+    text-decoration-line: underline;
+} 
+
+/*Home page banner styling*/
+
+#homepageBannerImage {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+}
+
+.bannerSubtitle {
+    background-color: var(--titleBackgroundColor);
+    font-size: 14px;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 180px;
+    right: 10px;
+}
+
+/* .bodyContentSection {
+    width: 100%;
+} */
+
+.bodyContentSection {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    height: 125px;
+    padding: 10px;
+}
+
+.sectionTitle {
+    width: 20%;
+    height: 125px;
+    display: flex;
+    flex-wrap: wrap; 
+    font-size: 30px;
+    color: var(--generalTextColor);
+    text-align: right;
+    border-color: var(--workSectionBorderColor);
+    border-right: solid;
+    margin: 5px;
+    padding-right: 5px;
+}
+
+.sectionText {
+    font-size: 10px;
+    width: 70%;
+    height: 125px;
+    display: flex; 
+    align-items: center;
+    color: var(--generalTextColor);
+}
+
+/* WORK EXAMPLES SECTION */
+
+.bodyContentSection2 {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    padding: 10px;
+}
+
+.sectionTitle2 {
+    width: 20%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap; 
+    font-size: 30px;
+    color: var(--generalTextColor);
+    text-align: right;
+    border-color: var(--workSectionBorderColor);
+    border-right: solid;
+    margin: 5px;
+    padding-right: 5px;
+}
+
+.firstSectionContainer {
+    width: 60%;
+}
+
+#firstProjectImage {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.projectDetails {
+    display: block;
+    position: relative;
+    bottom: 100px; 
+    left: 20px;
+    background-color: var(--titleBackgroundColor);
+    width: 20%;
+}
+
+.projectName {
+    font-size: 14px;
+
+}
+
+.projectDescription {
+    font-size: 10px;
+}
+
+
+.otherProjectsContainers {
+    display: block;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#otherProjectsImage1 {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/* CONTACT INFORMATION SECTION */
+
+.contactInformation {
+    display: inline;
+}
+
+.contactDetails {
+    display: flex;
+    align-items: center;
+}
+
+.contactInformationLink {
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
