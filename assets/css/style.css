@@ -29,7 +29,6 @@
     margin: 0px;
 }
 
-/*Home Page Header Styling*/
 
 #headerBanner {
     display: block;
@@ -46,6 +45,7 @@
 .homepageHeaderTitle {
     display: block;
     font-size: 24px;
+    font-weight: bold;
     background-color: var(--titleBackgroundColor);
     width: 20%;
     text-align: right;
@@ -61,12 +61,33 @@
     display: inline;
     color: var(--headerTextColor);
     font-size: 18px;
-    font-style: bold;
+    font-weight: bold;
     width: 20%;
     padding: 5px;
     text-underline-offset: 3px;
     text-decoration-line: underline;
 } 
+
+/*Styling when Page < 992px */
+
+@media screen and (max-width: 992px) {
+
+    /*Header media screen modifications */
+    #headerBanner{
+        display: block;
+        display: flex; 
+        flex-direction: column;
+        padding: 10px;
+    }
+    .homepageHeaderTitle {
+        text-align: center;
+    }
+}
+
+/* Styling when page smaller than 768px remains the same */
+
+
+/*HEADER Styling when page < 768px */
 
 /*Home page banner styling*/
 
@@ -79,11 +100,27 @@
 .bannerSubtitle {
     background-color: var(--titleBackgroundColor);
     font-size: 14px;
-    margin: 0;
+    margin: 0px;
     padding: 5px;
     position: absolute;
     top: 180px;
     right: 10px;
+}
+
+/* Styling of banner remains the same at less than 992px. */
+
+/* Styling of banner changes when smaller than 768px. */
+
+@media screen and (max-width: 768px) {
+    .bannerSubtitle {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; 
+        text-align: center;
+        width: 140px;
+    }
 }
 
 /* .bodyContentSection {
@@ -98,71 +135,113 @@
     padding: 10px;
 }
 
-.sectionTitle {
-    width: 20%;
+/*Body Section 1, "About Me" section. */
+
+.sectionTitleContainer {
+    border-color: var(--workSectionBorderColor);
+    width: 20%;    
+    border-right: solid;
+    border-color: var(--workSectionBorderColor);
     height: 125px;
-    display: flex;
-    flex-wrap: wrap; 
+}
+
+.sectionTextContainer {
+    width: 70%;
+}
+
+.sectionTitle {
+    display: block;
     font-size: 30px;
     color: var(--generalTextColor);
     text-align: right;
-    border-color: var(--workSectionBorderColor);
-    border-right: solid;
     margin: 5px;
     padding-right: 5px;
 }
 
-.sectionText {
+.sectionTextContainer {
+    height: auto;
+    margin-left: 20px;
+}
+.sectionText1 {
+    display: block;
     font-size: 10px;
-    width: 70%;
-    height: 125px;
     display: flex; 
     align-items: center;
     color: var(--generalTextColor);
 }
 
+@media screen and (max-width: 992px) {
+    .bodyContentSection {
+        display: flex;
+        flex-wrap: wrap; 
+        height: auto;
+    }
+    .sectionTitleContainer {
+        height: 40px;
+        width: 100%;
+        display: flex; 
+        justify-content: left;
+        border: none;
+        border-bottom: solid; 
+        border-color: var(--workSectionBorderColor);
+    }
+    .sectionTextContainer {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+    }
+}
+
+/* Content layout stays the same when less than 992px */
+
+
+
+
 /* WORK EXAMPLES SECTION */
 
 .bodyContentSection2 {
-    display: block;
     display: flex;
     flex-wrap: wrap;
     height: 500px;
     padding: 10px;
 }
 
-.sectionTitle2 {
-    width: 20%;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap; 
-    font-size: 30px;
-    color: var(--generalTextColor);
-    text-align: right;
+.sectionTitleContainer2 {
     border-color: var(--workSectionBorderColor);
+    width: 20%;    
     border-right: solid;
-    margin: 5px;
-    padding-right: 5px;
+    border-color: var(--workSectionBorderColor);
+    height: 500px;
 }
 
-.firstSectionContainer {
-    width: 60%;
+.projectsContainer {
+    height: 500px;
+    padding: 10px;
+    width: 70%;
+}
+
+
+.firstProjectContainer {
+    width: 100%;
+    border: solid;
+    border-color: var(--workSectionBorderColor);
+    height: 175px;
+    margin-bottom: 20px;
 }
 
 #firstProjectImage {
+    display: inline;
     width: 100%;
     height: 175px;
     object-fit: cover;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
 }
 
 .projectDetails {
     display: block;
     position: relative;
-    bottom: 100px; 
-    left: 20px;
+    bottom: 60px; 
     background-color: var(--titleBackgroundColor);
     width: 20%;
 }
@@ -177,18 +256,54 @@
 }
 
 
-.otherProjectsContainers {
-    display: block;
-    width: 60%;
+.otherProjectsContainer {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #otherProjectsImage1 {
     width: 100%;
     height: 100px;
     object-fit: cover;
-    padding: 10px;
+}
+
+.subProjectContainers {
+    display: block;
+    width: 45%;
+    height: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border: solid;
+    border-color: var(--workSectionBorderColor);
+    
+}
+
+@media screen and (max-width: 992px) {
+    .sectionTitleContainer2 {
+        height: 40px;
+        width: 100%;
+        display: flex; 
+        justify-content: left;
+        border: none;
+        border-bottom: solid; 
+        color: var(--workSectionBorderColor);
+    }
+
+    .projectsContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .subProjectContainers {
+        display: inline;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 }
 
 /* CONTACT INFORMATION SECTION */
@@ -198,14 +313,30 @@
 }
 
 .contactDetails {
+    height: 125px;
+    margin-left: 20px;
+    display: block;
     display: flex;
     align-items: center;
 }
 
+.contactDetailsContainer {
+    display: block;
+    display: flex;
+}
+
 .contactInformationLink {
+    margin: 20px;
     text-decoration: none;
     text-decoration-line: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
 }
 
+@media screen and (max-width: 768px) {
+    .contactInformation {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
