@@ -218,6 +218,8 @@ appears within the image container.*/
     height: 500px;
     padding: 10px;
     width: 70%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
