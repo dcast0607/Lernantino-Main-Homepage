@@ -8,6 +8,7 @@
     <title>Lernantino Portfolio</title>
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/mediaQueries.css">
 </head>
 
 <!--HEADER BANNER SECTION-->
@@ -19,13 +20,28 @@ the homepage banner.-->
         <!--Created h1 "mainTitle" to apply styling elements to it.-->
         <h1 id="mainTitle">Lernantino</h1>
     </div>
-
+    <!--Creating header class to house the header button sections.-->
     <h1 id="homepageHeaderOptionsSection">
+        <!--Creating ul class options container so that I can push these
+        elements to the right by 35px-->
         <ul class="homepageHeaderOptionsBox">
-            <li class="homepageHeaderButton">About Me</li>
-            <li class="homepageHeaderButton">Work</li>
-            <li class="homepageHeaderButton">Contact Me</li>
-            <li class="homepageHeaderButton">Resume</li>
+            <!--Creating the same "li" element class so that I can modify these
+            elements as a whole, this will allow me to space the elements and 
+            apply styling properties to them.-->
+            <li class="homepageHeaderButton">
+                <!--Creating an "a" class so that I can remove the "visited" links
+                text-decoration elements.-->
+                <a class="headerButtonLinks" href="#aboutMeSection">About Me</a>
+            </li>
+            <li class="homepageHeaderButton">
+                <a class="headerButtonLinks" href="#workSection">Work</a>
+            </li>
+            <li class="homepageHeaderButton">
+                <a class="headerButtonLinks" href="#contactMeSection">Contact Me</a>
+            </li>
+            <li class="homepageHeaderButton">
+                <a class="headerButtonLinks" href="https://dcast0607.github.io/Webpage-Code-Refactor/">Resume</a>
+            </li>
         </ul>
     </h1>
 </div>
@@ -35,28 +51,42 @@ the homepage banner.-->
 <!--Creating container to enclose image and so that I can use position 
 attributes to add a subtitle to the image.-->
     <div class="homepageBanner">
+        <!--Creating an image ID to apply attributes to the size of the image container
+        and to modify how the image is rendered on the page.-->
         <img id="homepageBannerImage" src="./assets/images/IMG_3628.jpg" alt="Carlsbad Flower Fields">
+        <!--Creating a span class so that I can move the container within this span class based
+        off the container holding the image.-->
         <span class="bannerSubtitle">Carlsbad Flower Fields</span>
     </div>
 
 <!--ABOUT ME SECTION-->
 <!--Creating containers to enclose the main content of the website. 
 Will be calling containers "bodyContentSection."-->
-<div class="bodyContent">
-    <div class="bodyContentSection">
-        <div class="sectionTitleContainer">
-        <span class="sectionTitle">About Me</span>
-        </div>
-        <div class="sectionTextContainer">  
-        <span class="sectionText1">
+<!--Creating a div and an ID so that I can use this in the anchor tag on our header options
+to send a user back to each section of the body. Will use this for the other sections as well.-->
+<div id="aboutMeSection"></div>
+    <!--Creating a div "bodyContent" container to enclose the main content of the page. -->
+    <div class="bodyContent">
+        <!--Creating section containers that will be used for the "About Me, Work, and Contact
+        Me" section. This will allow me to apply sizing properties to the container as well as 
+        how they are displayed.-->
+        <div class="bodyContentSection">
+            <!--Within the bodyContentSection container, I am going to be creating two additional
+            containers; a "sectionTitle" element and a "sectionTextContainer". We will be using
+            these two containers -->
+            <div class="sectionTitleContainer">
+                <span class="sectionTitle">About Me</span>
+            </div>
+            <div class="sectionTextContainer">  
+                <span class="sectionText1">
             Sitting in the sun, away from everyone who had done him harm in the past, 
             he quietly listened to those who roamed by. He felt at peace in the moment, 
             hoping it would last, but knowing the reprieve would soon come to an end. 
             He closed his eyes, the sun beating down on face and he smiled. 
             He smiled for the first time in as long as he could remember.
-        </span>
-            </br>
-        <span class="sectionText1">
+                </span>
+                </br>
+                <span class="sectionText1">
             Indescribable oppression, which seemed to generate in some unfamiliar part 
             of her consciousness, filled her whole being with a vague anguish. It was 
             like a shadow, like a mist passing across her soul's summer day. It was strange 
@@ -64,12 +94,12 @@ Will be calling containers "bodyContentSection."-->
             husband, lamenting at Fate, which had directed her footsteps to the path which 
             they had taken. She was just having a good cry all to herself. The mosquitoes 
             made merry over her, biting her firm, round arms and nipping at her bare insteps.
-        </span>
-        </div>
+                </span>
+            </div>
     </div>
 
 <!--WORK SECTION-->
-
+    <div id="workSection"></div>
     <div class="bodyContentSection2">
         <div class="sectionTitleContainer2">
         <span class="sectionTitle">Work</span>
@@ -89,7 +119,7 @@ Will be calling containers "bodyContentSection."-->
         <div class="otherProjectsContainer">
             <div class="subProjectContainers">
             <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                <img id="otherProjectsImage1" src="./assets/images/LED Lights.webp" alt="LED Wall">
+                <img class="otherProjectsImage1" src="./assets/images/LED Lights.webp" alt="LED Wall">
             </a>
             <div class="projectDetails">
                 <span class="projectName">LED Wall</span>
@@ -99,7 +129,7 @@ Will be calling containers "bodyContentSection."-->
             </div>
             <div class="subProjectContainers">
                 <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                    <img id="otherProjectsImage1" src="./assets/images/calculator.jpeg" alt="LED Wall">
+                    <img class="otherProjectsImage1" src="./assets/images/calculator.jpeg" alt="LED Wall">
                 </a>
                 <div class="projectDetails">
                     <span class="projectName">Calculator</span>
@@ -109,7 +139,7 @@ Will be calling containers "bodyContentSection."-->
             </div>
             <div class="subProjectContainers">
                 <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                    <img id="otherProjectsImage1" src="./assets/images/puzzles.jpeg" alt="LED Wall">
+                    <img class="otherProjectsImage1" src="./assets/images/puzzles.jpeg" alt="LED Wall">
                 </a>
                 <div class="projectDetails">
                     <span class="projectName">Pastel Puzzles</span>
@@ -119,7 +149,7 @@ Will be calling containers "bodyContentSection."-->
             </div>
             <div class="subProjectContainers">
                 <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                    <img id="otherProjectsImage1" src="./assets/images/runbuddy.png" alt="LED Wall">
+                    <img class="otherProjectsImage1" src="./assets/images/runbuddy.png" alt="LED Wall">
                 </a>
                 <div class="projectDetails">
                     <span class="projectName">Run Buddy</span>
@@ -133,14 +163,28 @@ Will be calling containers "bodyContentSection."-->
     </div>
 
 <!--CONTACT ME SECTION-->
+<!--Similar in structure to the About Me section container. Instead of having a block
+of text, we will instead have a bunch of list items that will be used to display my 
+contact details.-->
+<!--Declaring a div with the class "contactMeSection" so that we can call this when using 
+the buttons on the header.-->
+<div id="contactMeSection"></div>
+    <!--Declaring the content section.-->
     <div class="bodyContentSection">
+        <!--Creating a container to house the title of the section.-->
         <div class="sectionTitleContainer">
-        <span class="sectionTitle">Contact Me</span>
+            <!--Span class to hold the title of the section.-->
+            <span class="sectionTitle">Contact Me</span>
         </div>
+        <!--Creating a container to house the contact details in the contact me section.-->
         <div class="contactDetails">
-            <div class="contactDetailsContainer">
                 <ul>
+                    <!--Creating a class for my "li" elements so that I can apply styling elements
+                    as well as modify the display properties.-->
                     <li class="contactInformation">
+                        <!--Creating a contact information anchor class, I want my links to display
+                        constant styling attributes. Primarily, I want the links to stay consistent
+                        in color when the user visits them or doesn't.-->
                         <a class="contactInformationLink" href="tel:555-555-5555">555.555.5555</a>
                     </li>
 
@@ -156,7 +200,6 @@ Will be calling containers "bodyContentSection."-->
                         <a class="contactInformationLink" href="https://www.spotify.com">Spotify</a>
                     </li>
                 </ul>
-            </div>
         </div>
     </div>
 </div>

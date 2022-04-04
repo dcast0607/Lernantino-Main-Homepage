@@ -10,6 +10,7 @@
 --headerTextColor: rgb(1, 106, 106);
 --titleTextColor: black;
 --titleBackgroundColor: rgb(1, 106, 106);
+--mainTitleColor: rgb(45, 45, 45);
 
 /*Body Variables*/
 --bodyBackgroundColor: white; 
@@ -29,9 +30,11 @@
     margin: 0px;
 }
 
-
+/* Modifying  Styling attributes of the header banner, this is the
+container box that will allow me to set background color as well as 
+flex attributes. */
+/* HEADER STYLING ATTRIBUTES */
 #headerBanner {
-    display: block;
     background-color: var(--headerBackgroundColor);
     height: 50px;
     margin: 0px;
@@ -41,11 +44,11 @@
     align-items: center;
 }
 
+/* Creating a container for the Header title so that I can modify 
+text attributes as well as a apply dimensions to the attribute so 
+that it is responsive to width changes. */
 
 .homepageHeaderTitle {
-    display: block;
-    font-size: 24px;
-    font-weight: bold;
     background-color: var(--titleBackgroundColor);
     width: 20%;
     text-align: right;
@@ -53,8 +56,27 @@
     margin-right: 10px;
 }
 
+/* Modifying text properties using this ID selector. */
+
+#mainTitle {
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+    color: var(--mainTitleColor);
+}
+
+/* Adding padding to the right so that the container that holds
+the header options is pushed to the right from the right side of 
+the parent container. */
 .homepageHeaderOptionsBox {
     padding-right: 35px;
+}
+
+/* Removing the purple color displayed for links that have been 
+clicked. */
+.headerButtonLinks:visited {
+    text-decoration: none;
+    color: var(--headerTextColor);
 }
 
 .homepageHeaderButton {
@@ -68,35 +90,23 @@
     text-decoration-line: underline;
 } 
 
-/*Styling when Page < 992px */
-
-@media screen and (max-width: 992px) {
-
-    /*Header media screen modifications */
-    #headerBanner{
-        display: block;
-        display: flex; 
-        flex-direction: column;
-        padding: 10px;
-    }
-    .homepageHeaderTitle {
-        text-align: center;
-    }
-}
-
-/* Styling when page smaller than 768px remains the same */
+/* END OF HEADER STYLING ATTRIBUTES */
 
 
-/*HEADER Styling when page < 768px */
+/*HOMEPAGE BANNER STYLING ELEMENTS*/
 
-/*Home page banner styling*/
-
+/*Applying sizing properties to the image as well
+as modifying the image so that it fits and renders
+properly in its container.*/
 #homepageBannerImage {
     width: 100%;
     height: 175px;
     object-fit: cover;
 }
 
+/*Applying general sizing and styling properties 
+as well as position properties so that a subtitle
+appears within the image container.*/
 .bannerSubtitle {
     background-color: var(--titleBackgroundColor);
     font-size: 14px;
@@ -107,32 +117,17 @@
     right: 10px;
 }
 
-/* Styling of banner remains the same at less than 992px. */
+/*END OF HOMEPAGE BANNER Styling Attributes*/
 
-/* Styling of banner changes when smaller than 768px. */
+/*ABOUT ME AND CONTACT ME SECTION STYLING ATTRIBUTES*/
 
-@media screen and (max-width: 768px) {
-    .bannerSubtitle {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0; 
-        text-align: center;
-        width: 140px;
-    }
-}
-
-/* .bodyContentSection {
-    width: 100%;
-} */
-
+/*Creates a container for the  */
 .bodyContentSection {
     display: block;
+    height: 125px;
+    padding: 10px; 
     display: flex;
     flex-wrap: wrap;
-    height: 125px;
-    padding: 10px;
 }
 
 /*Body Section 1, "About Me" section. */
@@ -170,35 +165,40 @@
     color: var(--generalTextColor);
 }
 
-@media screen and (max-width: 992px) {
-    .bodyContentSection {
-        display: flex;
-        flex-wrap: wrap; 
-        height: auto;
-    }
-    .sectionTitleContainer {
-        height: 40px;
-        width: 100%;
-        display: flex; 
-        justify-content: left;
-        border: none;
-        border-bottom: solid; 
-        border-color: var(--workSectionBorderColor);
-    }
-    .sectionTextContainer {
-        width: 100%;
-        margin-top: 10px;
-        height: auto;
-    }
+/* CONTACT INFORMATION SECTION */
+
+.contactInformation {
+    display: inline;
 }
 
-/* Content layout stays the same when less than 992px */
+.contactDetails {
+    height: 125px;
+    margin-left: 20px;
+    display: block;
+    display: flex;
+    align-items: center;
+}
 
+.contactInformationLink {
+    margin: 20px;
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+    color: var(--generalTextColor);
+}
 
+.contactInformationLink:visited {
+    text-decoration: none;
+    color: var(--generalTextColor);
+} 
 
+/*END OF ABOUT ME AND CONTACT INFORMATION ATTRIBUTES*/
 
 /* WORK EXAMPLES SECTION */
 
+
+/*WORK SECTION STYLING ATTRIBUTES*/
 .bodyContentSection2 {
     display: flex;
     flex-wrap: wrap;
@@ -244,6 +244,7 @@
     bottom: 60px; 
     background-color: var(--titleBackgroundColor);
     width: 20%;
+    height: 20%;
 }
 
 .projectName {
@@ -263,7 +264,9 @@
     justify-content: space-between;
 }
 
-#otherProjectsImage1 {
+.otherProjectsImage1 {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     height: 100px;
     object-fit: cover;
@@ -280,63 +283,4 @@
     
 }
 
-@media screen and (max-width: 992px) {
-    .sectionTitleContainer2 {
-        height: 40px;
-        width: 100%;
-        display: flex; 
-        justify-content: left;
-        border: none;
-        border-bottom: solid; 
-        color: var(--workSectionBorderColor);
-    }
-
-    .projectsContainer {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 768px)
-{
-    .subProjectContainers {
-        display: inline;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-    }
-}
-
-/* CONTACT INFORMATION SECTION */
-
-.contactInformation {
-    display: inline;
-}
-
-.contactDetails {
-    height: 125px;
-    margin-left: 20px;
-    display: block;
-    display: flex;
-    align-items: center;
-}
-
-.contactDetailsContainer {
-    display: block;
-    display: flex;
-}
-
-.contactInformationLink {
-    margin: 20px;
-    text-decoration: none;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-}
-
-@media screen and (max-width: 768px) {
-    .contactInformation {
-        display: block;
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-}
+/*END OF WORK SECTION STYLING ATTRIBUTES*/

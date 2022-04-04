@@ -1,0 +1,179 @@
+
+/*HEADER SECTION MEDIA QUERIES*/
+/*Styling when Page < 992px */
+
+
+/* Adding media screen queries to make the title responsive. The
+container box that hols the title is set to defined width and the
+margin is set to 0.*/
+@media screen and (max-width: 600px) {
+    .homepageHeaderTitle {
+        width: 150px;
+        margin: 0px;
+ }
+}
+
+@media screen and (max-width: 992px) {
+
+    /*Header media screen modifications */
+    #headerBanner{
+        display: block;
+        display: flex; 
+        flex-direction: column;
+        padding: 10px;
+    }
+    .homepageHeaderTitle {
+        text-align: center;
+    }
+
+    .homepageHeaderOptionsBox {
+        padding: 0px;
+    }
+}
+
+/* Styling when page smaller than 768px remains the same */
+
+/*END OF HEADER SECTION MEDIA QUERIES*/
+
+/*HOMEPAGE BANNER ATTRIBUTES*/
+
+/* Styling of banner remains the same at less than 992px. */
+
+/* Styling of banner changes when smaller than 768px. */
+
+@media screen and (max-width: 768px) {
+    .bannerSubtitle {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0; 
+        text-align: center;
+        width: 140px;
+    }
+}
+
+/*END OF HOMEPAGE BANNER ATTRIBUTES*/
+
+/*BODY MEDIA SCREEN QUERIES */
+
+/*ABOUT ME AND CONTACT ME SECTION MEDIA QUERIES*/
+
+@media screen and (max-width: 996px) {
+    .contactDetails {
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contactInformation {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .contactDetails {
+        height: 100px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 996px) {
+    .bodyContentSection {
+        display: flex;
+        flex-wrap: wrap; 
+        height: auto;
+    }
+    .sectionTitleContainer {
+        height: 40px;
+        width: 100%;
+        display: flex; 
+        justify-content: left;
+        border: none;
+        border-bottom: solid; 
+        border-color: var(--workSectionBorderColor);
+    }
+    .sectionTextContainer {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+    }
+}
+
+/* Content layout stays the same when less than 992px */
+
+
+/*END OF ABOUT ME AND CONTACT ME SECTION MEDIA QUERIES*/
+
+
+/*WORK CONTENT SECTION MEDIA QUERIES*/
+
+
+@media screen and (max-width: 992px) {
+    .sectionTitleContainer2 {
+        height: 40px;
+        width: 100%;
+        display: flex; 
+        justify-content: left;
+        border: none;
+        border-bottom: solid; 
+        color: var(--workSectionBorderColor);
+    }
+
+    .projectsContainer {
+        width: 100%;
+    }
+
+    .otherProjectsImage1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .bodyContentSection2 {
+        width: 100%;
+        height: 1050px;
+    } 
+
+    .subProjectContainers {
+        width: 100%;
+        height: 175px;
+    }
+
+    .firstProjectContainer {
+        margin: 0px;
+        width: 90%;
+    }
+
+    .otherProjectsImage1 {
+        display: flex;
+        width: 100%;
+        height: 175px;
+        padding: 0px;
+    }
+    
+    .projectsContainer {
+        width: 100%;
+        height: 960px;
+        padding-top: 10px; 
+        margin-bottom: 10px;
+        object-fit: fill;
+    }
+
+    .otherProjectsContainer {
+        width: 90%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .projectDetails {
+        position: relative;
+        bottom: 50px;
+        left: 0px;
+    }
+
+}
+
+
+/*END OF BODY MEDIA SCREEN QUERIES */
