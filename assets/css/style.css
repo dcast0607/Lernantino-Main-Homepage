@@ -37,6 +37,7 @@ flex attributes. */
 #headerBanner {
     background-color: var(--headerBackgroundColor);
     height: 50px;
+    width: 100%;
     margin: 0px;
     padding: 0px;
     display: flex;
@@ -119,170 +120,157 @@ appears within the image container.*/
 
 /*END OF HOMEPAGE BANNER Styling Attributes*/
 
-/*ABOUT ME AND CONTACT ME SECTION STYLING ATTRIBUTES*/
-
-/*Creates a container for the  */
-.bodyContentSection {
-    display: block;
-    height: 125px;
-    padding: 10px; 
-    display: flex;
-    flex-wrap: wrap;
+/*Beginning of body stylings*/
+/*BEGINNING OF ABOUT ME SECTION STYLINGS*/
+.contentContainer {
+    width: 100%;
+    height: 250px;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--titleBackgroundColor);
 }
 
-/*Body Section 1, "About Me" section. */
+.gridContainer {
+    display: grid;
+    grid-template-columns: 150px auto auto;
+    gap: 10px;
+}
+
+.gridItem1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+#headshotContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+#headshot {
+    width: 200px;
+    height: 300px;
+    object-fit: contain;
+}
+
+#textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+}
+
+.aboutMeDetailsText {
+    font-size: 16px;
+    font-family: var(--mainFont);
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.gridItem2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.griItem3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
 
 .sectionTitleContainer {
-    border-color: var(--workSectionBorderColor);
-    width: 20%;    
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 5px;
     border-right: solid;
-    border-color: var(--workSectionBorderColor);
-    height: 125px;
-}
-
-.sectionTextContainer {
-    width: 70%;
+    border-color: var(--titleBackgroundColor);
 }
 
 .sectionTitle {
-    display: block;
-    font-size: 30px;
-    color: var(--generalTextColor);
+    font-size: 32px; 
+    font-weight: bold;
+    font-family: var(--mainFont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: right;
-    margin: 5px;
+    margin-right: 5px;
+    padding-right: 5px;
+}
+/*END OF ABOUT ME SECTION*/
+
+/*BEGINNING OF WORK SECTION CONTAINER*/
+.workContentContainer {
+    width: 100%;
+    height: 600px;
+    border-width: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: var(--titleBackgroundColor);
+}
+
+.workGridContainer {
+    display: grid;
+    grid-template-columns: 150px auto auto;
+    gap: 10px;
+}
+
+.workSectionGridItem1 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    background-color: red;
+}
+
+.workSectionGridItem2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    width: 100%;
+    background-color: black;
+}
+
+.projectsGridContainer {
+    display: grid;
+    grid-template-columns: 150px auto auto;
+    gap: 10px;
+}
+
+.projectGridItem1 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.workSectionTitleContainer {
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 5px;
+    border-right: solid;
+    border-color: var(--titleBackgroundColor);
+}
+
+.workSectionTitle {
+    font-size: 32px; 
+    font-weight: bold;
+    font-family: var(--mainFont);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    margin-right: 5px;
     padding-right: 5px;
 }
 
-.sectionTextContainer {
-    height: auto;
-    margin-left: 20px;
-}
-.sectionText1 {
-    display: block;
-    font-size: 10px;
-    display: flex; 
-    align-items: center;
-    color: var(--generalTextColor);
-}
-
-/* CONTACT INFORMATION SECTION */
-
-.contactInformation {
-    display: inline;
-}
-
-.contactDetails {
-    height: 125px;
-    margin-left: 20px;
-    display: block;
-    display: flex;
-    align-items: center;
-}
-
-.contactInformationLink {
-    margin: 20px;
-    text-decoration: none;
-    text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-    color: var(--generalTextColor);
-}
-
-.contactInformationLink:visited {
-    text-decoration: none;
-    color: var(--generalTextColor);
-} 
-
-/*END OF ABOUT ME AND CONTACT INFORMATION ATTRIBUTES*/
-
-/* WORK EXAMPLES SECTION */
-
-
-/*WORK SECTION STYLING ATTRIBUTES*/
-.bodyContentSection2 {
-    display: flex;
-    flex-wrap: wrap;
-    height: 500px;
-    padding: 10px;
-}
-
-.sectionTitleContainer2 {
-    border-color: var(--workSectionBorderColor);
-    width: 20%;    
-    border-right: solid;
-    border-color: var(--workSectionBorderColor);
-    height: 500px;
-}
-
-.projectsContainer {
-    height: 500px;
-    padding: 10px;
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-
-.firstProjectContainer {
-    width: 100%;
-    border: solid;
-    border-color: var(--workSectionBorderColor);
-    height: 175px;
-    margin-bottom: 20px;
-}
 
 #firstProjectImage {
-    display: inline;
-    width: 100%;
-    height: 175px;
-    object-fit: cover;
-    display: flex;
-    flex-wrap: wrap;
+    width: 50%;
+    height: 10%;
+    object-fit: fill;
 }
 
-.projectDetails {
-    display: block;
-    position: relative;
-    bottom: 60px; 
-    background-color: var(--titleBackgroundColor);
-    width: 20%;
-    height: 20%;
-}
+/*END OF WORK SECTION CONTAINER*/
+/*End of body stylings*/
 
-.projectName {
-    font-size: 14px;
-
-}
-
-.projectDescription {
-    font-size: 10px;
-}
-
-
-.otherProjectsContainer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.otherProjectsImage1 {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100px;
-    object-fit: cover;
-}
-
-.subProjectContainers {
-    display: block;
-    width: 45%;
-    height: 100px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border: solid;
-    border-color: var(--workSectionBorderColor);
-    
-}
-
-/*END OF WORK SECTION STYLING ATTRIBUTES*/
