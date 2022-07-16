@@ -1,6 +1,6 @@
 # Lernantino-Main-Homepage
 
-Objective: </br>
+### Objective:
 Build a website from scratch, this website should be used as a portfolio to display your Projects to the end user.</br>
 
 

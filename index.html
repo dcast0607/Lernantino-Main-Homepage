@@ -102,64 +102,70 @@ attributes to add a subtitle to the image.-->
             </container>
         </container>
         <container id="workSectionProjectsContainer" class="workSectionGridItem2">
-            <container id="project1" class="projectGridItem1">
-                <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                    <img id="firstProjectImage" src="./assets/images/firstProject.png" alt="First Project">
-                </a>
-                <div class="projectDetailsProject1">
-                    <span class="projectName">First Project</span>
-                        </br>
-                    <span class="projectDescription">Refactor</span>
-            </container>
-            <div class="projectsContainer">
-                <div class="firstProjectContainer">
+            <container id="workSectionIndividualProjectsContainer" class="workSectionIndividualItemsGridContainer">
+                    <container id="project1" class="projectGridItem1">
+                                <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
+                                    <img id="firstProjectImage" src="./assets/images/firstProject.png" alt="First Project">
+                                </a>
+                                <div class="projectDetailsProject1">
+                                    <span class="projectName">First Project</span>
+                                        </br>
+                                    <span class="projectDescription">Refactor</span>
+                                </div>
+                    </container>
+                    <container id="project2" class="additionalProjectGridItems">
+                        <div class="subProjectContainers">
+                            <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
+                                <img class="otherProjectImages" src="./assets/images/LED Lights.webp" alt="LED Wall">
+                            </a>
+                            <div class="projectDetailsOtherProjects">
+                                <span class="projectName">LED Wall</span>
+                                </br>
+                                <span class="projectDescription">Node/IoT</span>
+                            </div>
+                        </div>
+                    </container>
+                    <div class="projectsContainer">
+                        <div class="firstProjectContainer">
 
+                        </div>
+                        </div>
+                        <div class="otherProjectsContainer">
+ 
+                        <div class="subProjectContainers">
+                            <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
+                                <img class="otherProjectsImage1" src="./assets/images/calculator.jpeg" alt="LED Wall">
+                            </a> -->
+                            <div class="projectDetailsOtherProjects">
+                                <span class="projectName">Calculator</span>
+                                </br>
+                                <span class="projectDescription">React/Javascript/CSS</span>
+                            </div>
+                        </div>
+                        <div class="subProjectContainers">
+                            <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
+                                <img class="otherProjectsImage1" src="./assets/images/puzzles.jpeg" alt="LED Wall">
+                            </a> -->
+                            <div class="projectDetails">
+                                <span class="projectName">Pastel Puzzles</span>
+                                </br>
+                                <span class="projectDescription">MERN Stack</span>
+                            </div>
+                        </div>
+                        <div class="subProjectContainers">
+                            <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
+                                <img class="otherProjectsImage1" src="./assets/images/runbuddy.png" alt="LED Wall">
+                            </a> -->
+                            <div class="projectDetailsOtherProjects">
+                                <span class="projectName">Run Buddy</span>
+                                </br>
+                                <span class="projectDescription">HTML CSS</span>
+                            </div>
+                        </div>
+            
                     </div>
                 </div>
-                <div class="otherProjectsContainer">
-                <div class="subProjectContainers">
-                <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                    <img class="otherProjectsImage1" src="./assets/images/LED Lights.webp" alt="LED Wall">
-                </a> -->
-                <div class="projectDetailsOtherProjects">
-                    <span class="projectName">LED Wall</span>
-                    </br>
-                    <span class="projectDescription">Node/IoT</span>
-                </div>
-                </div>
-                <div class="subProjectContainers">
-                    <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                        <img class="otherProjectsImage1" src="./assets/images/calculator.jpeg" alt="LED Wall">
-                    </a> -->
-                    <div class="projectDetailsOtherProjects">
-                        <span class="projectName">Calculator</span>
-                        </br>
-                        <span class="projectDescription">React/Javascript/CSS</span>
-                    </div>
-                </div>
-                <div class="subProjectContainers">
-                    <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                        <img class="otherProjectsImage1" src="./assets/images/puzzles.jpeg" alt="LED Wall">
-                    </a> -->
-                    <div class="projectDetails">
-                        <span class="projectName">Pastel Puzzles</span>
-                        </br>
-                        <span class="projectDescription">MERN Stack</span>
-                    </div>
-                </div>
-                <div class="subProjectContainers">
-                    <!-- <a href="https://dcast0607.github.io/Webpage-Code-Refactor/">
-                        <img class="otherProjectsImage1" src="./assets/images/runbuddy.png" alt="LED Wall">
-                    </a> -->
-                    <div class="projectDetailsOtherProjects">
-                        <span class="projectName">Run Buddy</span>
-                        </br>
-                        <span class="projectDescription">HTML CSS</span>
-                    </div>
-                </div>
-    
-            </div>
-        </div>
+            </container>
         </container>
     </container>
     <!--End of Work Section Container-->
@@ -177,41 +183,46 @@ of text, we will instead have a bunch of list items that will be used to display
 contact details.-->
 <!--Declaring a div with the class "contactMeSection" so that we can call this when using 
 the buttons on the header.-->
-<div id="contactMeSection"></div>
-    <!--Declaring the content section.-->
-    <div class="bodyContentSection">
-        <!--Creating a container to house the title of the section.-->
-        <div class="sectionTitleContainer">
-            <!--Span class to hold the title of the section.-->
+<container id="contactMeSectionContainer" class="contentContainer gridContainer">
+    <container id="contactMeSectionChildContainer" class="gridItem1">
+        <container class="sectionTitleContainer">
             <span class="sectionTitle">Contact Me</span>
-        </div>
-        <!--Creating a container to house the contact details in the contact me section.-->
-        <div class="contactDetails">
-                <ul>
-                    <!--Creating a class for my "li" elements so that I can apply styling elements
-                    as well as modify the display properties.-->
-                    <li class="contactInformation">
-                        <!--Creating a contact information anchor class, I want my links to display
-                        constant styling attributes. Primarily, I want the links to stay consistent
-                        in color when the user visits them or doesn't.-->
-                        <a class="contactInformationLink" href="tel:555-555-5555">555.555.5555</a>
-                    </li>
+        </container>
+    </container>
+    <container id="headshotContainer" class="contactMeGridItem2">
+        <img id="headshot" src="./assets/images/_MG_7022.jpg" alt="Daniel Castro">
+    </container>
+    <container id="textContainer" class="contactMeGridItem3">
+        <div class="contactMeDetailsText">
+            <ul class="contactMeList">
+                <!--Creating a class for my "li" elements so that I can apply styling elements
+                as well as modify the display properties.-->
+                <li class="contactInformation">
+                    <!--Creating a contact information anchor class, I want my links to display
+                    constant styling attributes. Primarily, I want the links to stay consistent
+                    in color when the user visits them or doesn't.-->
+                    <a class="contactInformationLink" href="tel:555-555-5555">555.555.5555</a>
+                </li>
 
-                    <li class="contactInformation">
-                        <a class="contactInformationLink" href="mailto:lernantino@website.com">lernantino@website.com</a>
-                    </li>
+                <li class="contactInformation">
+                    <a class="contactInformationLink" href="mailto:lernantino@website.com">lernantino@website.com</a>
+                </li>
 
-                    <li class="contactInformation">
-                        <a class="contactInformationLink" href="https://github.com/dcast0607">Github</a>
-                    </li>
-                        <a class="contactInformationLink" href="https://www.twitter.com">Twitter</a>
-                    <li class="contactInformation">
-                        <a class="contactInformationLink" href="https://www.spotify.com">Spotify</a>
-                    </li>
-                </ul>
+                <li class="contactInformation">
+                    <a class="contactInformationLink" href="https://github.com/dcast0607">Github</a>
+                </li>
+                <li class="contactInformation">
+                    <a class="contactInformationLink" href="https://www.twitter.com">Twitter</a>
+                </li>
+                <li class="contactInformation">
+                    <a class="contactInformationLink" href="https://www.spotify.com">Spotify</a>
+                </li>
+            </ul>
         </div>
-    </div>
-</div>
+
+    </container>
+</container>
+<!-------------------------------------------------------->
 </body>
 <!--End of Body Container-->
 </html>

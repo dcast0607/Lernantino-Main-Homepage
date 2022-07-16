@@ -75,7 +75,7 @@ the parent container. */
 
 /* Removing the purple color displayed for links that have been 
 clicked. */
-.headerButtonLinks:visited {
+.headerButtonLinks {
     text-decoration: none;
     color: var(--headerTextColor);
 }
@@ -195,7 +195,7 @@ appears within the image container.*/
     font-family: var(--mainFont);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     text-align: right;
     margin-right: 5px;
     padding-right: 5px;
@@ -221,23 +221,9 @@ appears within the image container.*/
 .workSectionGridItem1 {
     grid-column-start: 1;
     grid-column-end: 1;
-    background-color: red;
 }
 
 .workSectionGridItem2 {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    width: 100%;
-    background-color: black;
-}
-
-.projectsGridContainer {
-    display: grid;
-    grid-template-columns: 150px auto auto;
-    gap: 10px;
-}
-
-.projectGridItem1 {
     grid-column-start: 2;
     grid-column-end: 4;
 }
@@ -246,7 +232,7 @@ appears within the image container.*/
     height: 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     border-width: 5px;
     border-right: solid;
     border-color: var(--titleBackgroundColor);
@@ -264,13 +250,67 @@ appears within the image container.*/
     padding-right: 5px;
 }
 
+#project1 {
+    width: 98%;
+    height: 20%;
+}
+
+.workSectionIndividualItemsGridContainer {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 
 #firstProjectImage {
-    width: 50%;
-    height: 10%;
-    object-fit: fill;
+    margin-top: 10px;
+    object-fit: cover;
+    width: 98%;
+    height: 90%;
 }
+
+.otherProjectImages{
+    width: 45%;
+    height: 15%;
+    object-fit: cover;
+}
+
+
 
 /*END OF WORK SECTION CONTAINER*/
 /*End of body stylings*/
 
+/* Footer Section */
+
+
+.contactMeGridItem2 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.contactMeGriItem3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.contactMeDetailsText {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contactInformation {
+    display: inline;
+    padding: 10px;
+    font-size: large;
+}
+
+.contactInformationLink {
+    text-decoration: underline;
+    color: var(--headerTextColor);
+}
+
+/* Footer Section */
